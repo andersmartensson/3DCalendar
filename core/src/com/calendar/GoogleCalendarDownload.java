@@ -22,6 +22,8 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 
+import data.Data;
+
 /**
  * Created by Anders on 2016-03-08.
  */
@@ -82,9 +84,8 @@ public class GoogleCalendarDownload {
         InputStreamReader isr = new InputStreamReader(in);
 
         //System.out.println("->" + in. + "<-");
-
-        String s = "{\"installed\":{\"client_id\":\"53035057420-se1v5o64qkd72cmcqi1je5i9vopdeoo7.apps.googleusercontent.com\",\"project_id\":\"weighty-card-124409\",\"auth_uri\":\"https://accounts.google.com/o/oauth2/auth\",\"token_uri\":\"https://accounts.google.com/o/oauth2/token\",\"auth_provider_x509_cert_url\":\"https://www.googleapis.com/oauth2/v1/certs\",\"client_secret\":\"2FpOI5-XUiu6FfTNhJKEb_Uo\",\"redirect_uris\":[\"urn:ietf:wg:oauth:2.0:oob\",\"http://localhost\"]}}";
-        InputStream is = new ByteArrayInputStream( s.getBytes() );
+        String key = Data.G_KEY;
+        InputStream is = new ByteArrayInputStream( key.getBytes() );
         InputStreamReader isr2 = new InputStreamReader(is);
         //GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, isr);
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,isr2);
