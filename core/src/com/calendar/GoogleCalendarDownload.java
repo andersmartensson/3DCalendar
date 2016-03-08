@@ -72,16 +72,16 @@ public class GoogleCalendarDownload {
     public static Credential authorize() throws IOException {
         // Load client secrets.
         InputStream in = null;
-        System.out.println(GoogleCalendarDownload.class.getResource("/").getPath());
-
-        try{
-            in = GoogleCalendarDownload.class.getResourceAsStream("/client_secret.json");
-            //int s = in.read();
-        }
-        catch(Exception e){
-            System.out.println("FAILED!!!");
-        }
-        InputStreamReader isr = new InputStreamReader(in);
+//        System.out.println(GoogleCalendarDownload.class.getResource("/").getPath());
+//
+//        try{
+//            in = GoogleCalendarDownload.class.getResourceAsStream("/client_secret.json");
+//            //int s = in.read();
+//        }
+//        catch(Exception e){
+//            System.out.println("FAILED!!!");
+//        }
+//        InputStreamReader isr = new InputStreamReader(in);
 
         //System.out.println("->" + in. + "<-");
         String key = Data.G_KEY;
